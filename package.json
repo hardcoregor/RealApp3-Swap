@@ -1,5 +1,5 @@
 {
-  "name": "swap-dapp",
+  "name": "realapp3-swap-dapp",
   "version": "0.1.0",
   "private": true,
   "scripts": {
@@ -10,6 +10,7 @@
     "ganache": "node ganache"
   },
   "dependencies": {
+<<<<<<< HEAD
     "@nomiclabs/hardhat-ethers": "2.0.5",
     "@nomiclabs/hardhat-waffle": "2.0.3",
     "@openzeppelin/contracts": "4.5.0",
@@ -58,5 +59,12 @@
     "eslint-plugin-react-hooks": "^4.6.0",
     "postcss": "^8.4.7",
     "tailwindcss": "^3.0.23"
+=======
+    "eslint": "8.27.0",
+    "eslint-config-next": "13.0.3",
+    "next": "13.0.3",
+    "react": "18.2.0",
+    "react-dom": "18.2.0"
+>>>>>>> parent of 04323d1 (smart contracts 80% without faucet function and auto reward for staking, frontend without faucte page)
   }
 }
