@@ -1,5 +1,6 @@
 //SPDX-License-Identifier: Unlicense
-pragma solidity ^0.5.4;
+
+pragma solidity ^0.6.6;
 
 import "./DappToken.sol";
 import "./DaiToken.sol";
@@ -15,7 +16,7 @@ contract TokenFarm {
     mapping(address => bool) public hasStaked;
     mapping(address => bool) public isStaking;
 
-    constructor(DappToken _dappToken, DaiToken _daiToken) public {
+    constructor(DappToken _dappToken, DaiToken _daiToken)public payable {
         dappToken = _dappToken;
         daiToken = _daiToken;
         owner = msg.sender;

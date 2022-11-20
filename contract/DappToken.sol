@@ -1,4 +1,6 @@
-pragma solidity ^0.5.0;
+//SPDX-License-Identifier: Unlicense
+
+pragma solidity ^0.6.6;
 
 contract DappToken {
     string  public name = "Hardcoregor Token";

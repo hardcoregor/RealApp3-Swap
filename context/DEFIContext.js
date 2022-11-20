@@ -24,8 +24,6 @@ export const DEFIProvider = ({ children }) => {
     loading: true,
   });
 
-  console.log(currentAccount);
-
   const checkWalletIsConnected = async () => {
     if (!window.ethereum) return console.log('Please install MetaMask for using our NFT platform!');
 
@@ -33,6 +31,7 @@ export const DEFIProvider = ({ children }) => {
 
     if (accounts.length) {
       setConnectedAcc(accounts[0]);
+
       setCurrentAccount((state) => ({ ...state, account: accounts[0] }));
     } else {
       console.log('No accounts found.');
@@ -103,7 +102,7 @@ export const DEFIProvider = ({ children }) => {
   };
 
   return (
-    <DEFIContext.Provider value={{ connectWallet, connectedAcc, currentAccount, onStake, formInput, setFormInput, unStake }}>
+    <DEFIContext.Provider value={{ connectWallet, connectedAcc, currentAccount, onStake, unStake, formInput, setFormInput }}>
       {children}
     </DEFIContext.Provider>
   );

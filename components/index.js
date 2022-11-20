@@ -2,6 +2,6 @@ import Navbar from './Navbar';
 import Footer from './Footer';
 import Button from './Button';
 import Loader from './Loader';
-import SearchBar from './SearchBar';
+import CurrencyField from './CurrencyField';
 
-export { Navbar, Footer, Button, Loader, SearchBar };
+export { Navbar, Footer, Button, Loader, CurrencyField };

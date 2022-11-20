@@ -4,10 +4,14 @@ import { useTheme } from 'next-themes';
 
 import images from '../assets';
 
-const Searchbar = () => {
-  const [search, setSearch] = useState('DAI');
+const CurrencyField = ({ getSwapPrice, wethAmount }) => {
+  const [search, setSearch] = useState('SELECT A TOKEN');
   const [toggle, setToggle] = useState(false);
   const { theme } = useTheme();
+
+  const getPrice = (value) => {
+    getSwapPrice(value);
+  };
 
   return (
     <div
@@ -25,7 +29,7 @@ const Searchbar = () => {
       />
       {toggle && (
         <div
-          className="absolute top-full left-0 right-0 w-1/3 bg-nft-black-4 mt-4 z-10 py-3 px-4 rounded-2xl cursor-pointer flexCenter flex-col -ml-3 text-nft-black-1 border"
+          className="absolute top-full left-0 right-0 w-45 bg-nft-black-4 mt-4 z-10 py-3 px-4 rounded-2xl cursor-pointer flexCenter flex-col -ml-3 text-nft-black-1 border"
         >
           {['DAI', 'USDT', 'BNB', 'ETH', 'BTC'].map((item) => (
             <p
@@ -45,4 +49,4 @@ const Searchbar = () => {
   );
 };
 
-export default Searchbar;
+export default CurrencyField;

@@ -16,7 +16,7 @@ const stake = () => {
   return (
     <div className="p-16 min-h-screen">
       <div className="flex-col flexCenter my-20">
-        <div className="flex flexCenter flex-row w-49 font-poppins my-6 border rounded-xl py-6">
+        <div className="flex flexCenter flex-row w-49 font-poppins my-6 border bg-nft-black-4 text-white rounded-xl py-6">
           <div className="flex flexCenter flex-col justify-center w-2/4">
             <h1 className="font-bold text-xl  mb-2">Staking balance</h1>
             <h1>{ethers.utils.formatEther(stakingBalance)} mDai</h1>
@@ -55,8 +55,8 @@ const stake = () => {
           </div>
           <div className="flex-col flexCenter">
             <div className="text-lg font-semibold text-white mt-4">Estimated Gas: </div>
-            <Button btnName="Stake" classStyle="uppercase rounded-2xl mt-4 w-full py-4 text-xl nft-gradient" handleClick={() => onStake(valueToStaking)} />
-            <Button btnName="Unstake" classStyle="uppercase rounded-2xl mt-4 w-full py-4 text-xl border" handleClick={() => unStake()} />
+            <Button btnName="Stake" classStyle="uppercase rounded-2xl mt-4 w-full py-4 text-xl nft-gradient text-white" handleClick={() => onStake(valueToStaking)} />
+            <Button btnName="Unstake" classStyle="uppercase rounded-2xl mt-4 w-full py-4 text-xl border text-white" handleClick={() => unStake()} />
           </div>
         </div>
       </div>

@@ -13,11 +13,7 @@ module.exports = {
   contracts_build_directory: './context/',
   compilers: {
     solc: {
-      optimizer: {
-        enabled: true,
-        runs: 200,
-      },
-      evmVersion: 'petersburg',
+      version: '0.6.6',
     },
   },
 };
