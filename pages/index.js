@@ -38,7 +38,10 @@ const Home = () => {
           tokenName="UNI"
         />
         <div className="flex-col flexCenter">
-          <Button btnName="Swap" classStyle="uppercase rounded-2xl mt-4 w-full py-4 text-xl nft-gradient text-white" />
+          <Button
+            btnName="Swap"
+            classStyle="uppercase rounded-2xl mt-4 w-full py-4 text-xl nft-gradient text-white"
+          />
         </div>
       </div>
 
