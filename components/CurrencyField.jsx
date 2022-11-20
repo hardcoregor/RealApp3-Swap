@@ -7,6 +7,11 @@ import { DEFIContext } from '../context/DEFIContext';
 
 const CurrencyField = ({ tokenName, loading, spinner, value, field, balance }) => {
   const { theme } = useTheme();
+  const { getSwapPrice } = useContext(DEFIContext);
+
+  const getPrice = (valueForGet) => {
+    getSwapPrice(valueForGet);
+  };
 
   return (
     <div className="flex justify-between bg-white p-3 rounded-xl mt-2">
@@ -33,6 +38,7 @@ const CurrencyField = ({ tokenName, loading, spinner, value, field, balance }) =
           min="0"
           placeholder="0.0"
           value={value}
+          onBlur={(e) => (field === 'input' ? getPrice(e.target.value) : null)}
         />
       )}
     </div>

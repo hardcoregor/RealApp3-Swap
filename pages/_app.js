@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import { useEffect, useState } from 'react';
 import Script from 'next/script';
 import { ThemeProvider } from 'next-themes';
@@ -46,12 +45,3 @@ const MyApp = ({ Component, pageProps }) => (
 );
 
 export default MyApp;
-=======
-import '../styles/globals.css'
-
-function MyApp({ Component, pageProps }) {
-  return <Component {...pageProps} />
-}
-
-export default MyApp
->>>>>>> parent of 04323d1 (smart contracts 80% without faucet function and auto reward for staking, frontend without faucte page)
